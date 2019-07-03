@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/main_toolbar_id"
+      android:layout_width="match_parent"
+      android:background="@color/colorBlue"
+      app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+      android:layout_height="wrap_content">
+  </androidx.appcompat.widget.Toolbar>
+  
+  <com.google.android.material.tabs.TabLayout
+      android:id="@+id/tab_layout_id"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="80dp"
+      android:layout_marginRight="80dp"
+      android:layout_below="@+id/main_toolbar_id"
+      android:background="@color/colorWhite"
+      app:tabMode="scrollable"
+      app:tabGravity="fill"
+      app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+      app:tabTextColor="@color/colorLightBlack"
+      app:tabSelectedTextColor="@color/colorBlack">
+  </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab_layout_id">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+</RelativeLayout>
